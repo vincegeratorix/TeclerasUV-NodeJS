@@ -10,7 +10,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     EST_CORREO: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      unique: true
     },
     EST_NOMBRE: {
       type: DataTypes.STRING,

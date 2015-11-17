@@ -14,9 +14,8 @@ module.exports = function(app) {
   app.use('/', router);
 
   router.get('/estudiante/registro', function(request, response, next) {
-    var error = (typeof request.query.error == 'undefined') ? request.query.error : false;
-    response.render('registroestudiante', {
-      error: error
+    response.render('estudianteregistro', {
+      error: request.query.error
     });
   });
   router.post('/estudiante/registro', function(request, response, next) {
@@ -30,7 +29,7 @@ module.exports = function(app) {
             registro(request, response, next);
           }
         }
-        response.redirect("/");
+        response.redirect("/estudiante/registro?error=existe");
       } else {
         console.log("vacio");
         registro(request, response, next);
@@ -38,19 +37,25 @@ module.exports = function(app) {
     })
 
     function registro(request, response, next) {
-    if (request.body.contrasena == request.body.contrasena2) {
-      var pass_hasheada = crypto
-        .createHmac("sha1", config.palabra_secreta)
-        .update(request.body.contrasena)
-        .digest('hex');
-      console.log("pass_hasheada: ", pass_hasheada);
-      queries.login_y_registro.insertar_un_estudiante(request.body.nombre, request.body.email, pass_hasheada);
-      request.session.name = request.body.email;
-      request.session.tipo = "estudiante";
-      response.redirect("/estudiante/menu");
-    } else {
-      response.redirect("/estudiante/registro?error=true");
-    }
-  };
-})
+      if (request.body.contrasena == request.body.contrasena2) {
+        var pass_hasheada = crypto
+          .createHmac("sha1", config.palabra_secreta)
+          .update(request.body.contrasena)
+          .digest('hex');
+        console.log("pass_hasheada: ", pass_hasheada);
+        queries.login_y_registro.insertar_un_estudiante(request.body.nombre, request.body.email, pass_hasheada).then(function(resultado_estudiante) {
+          console.log(resultado_estudiante);
+
+          request.session.name = resultado_estudiante.dataValues.EST_ID;
+          request.session.tipo = "estudiante";
+          response.redirect("/estudiante/menu");
+
+        })
+      } else {
+        response.redirect("/estudiante/registro?error=contrasena");
+      }
+
+    };
+
+  })
 };

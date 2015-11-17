@@ -12,7 +12,8 @@ module.exports = function(app) {
   }));
   app.use('/', router);
 
-  router.get('/docente/analizar/:idasignatura', auth_docente, function(request, response, next) {
-    response.render('analizardocente', {});
+  router.get('/docente/menu', auth_docente, function(request, response, next) {
+    console.log("id usuario:",request.session.name, "tipo:", request.session.tipo);
+    response.render('docentemenu', {});
   });
 }

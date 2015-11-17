@@ -64,7 +64,7 @@ module.exports = function(app) {
             if (resultado_estudiantes[user].dataValues.EST_CORREO == request.body.email && contrasena_bd == pass_hasheada) {
               /*Podría haber usado librerías para sesion, como passport (que entre otras cosas permite conectarse a fb, google, local, y conectar todas las cuentas), pero ni yo ni ustedes teníamos el ánimo de aprender más API's, así que lo hice de la forma más artesanal que pude... escribiendo en las coockies
                */
-              request.session.name = request.body.email;
+              request.session.name = resultado_estudiantes[user].dataValues.EST_ID;
               request.session.tipo = "estudiante";
               ruta = "/estudiante/menu";
             }
@@ -86,7 +86,7 @@ module.exports = function(app) {
             var contrasena_bd = resultado_docentes[user].dataValues.DOC_PASSWORD;
             console.log(resultado_docentes[user].dataValues);
             if (resultado_docentes[user].dataValues.DOC_CORREO == request.body.email && contrasena_bd == pass_hasheada) {
-              request.session.name = request.body.email;
+              request.session.name = resultado_docentes[user].dataValues.DOC_ID;
               request.session.tipo = "docente";
               ruta = "/docente/menu";
             }

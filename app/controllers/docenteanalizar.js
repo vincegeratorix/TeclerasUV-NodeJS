@@ -1,6 +1,6 @@
 var express = require('express'),
   router = express.Router(),
-  auth_estudiante = require("../middleware/auth_estudiante.js"),
+  auth_docente = require("../middleware/auth_docente.js"),
   queries = require('../queries/index.js');
 
 module.exports = function(app) {
@@ -12,7 +12,7 @@ module.exports = function(app) {
   }));
   app.use('/', router);
 
-  router.get('/estudiante/menu', auth_estudiante, function(request, response, next) {
-    response.render('menuestudiante', {});
+  router.get('/docente/analizar/:idasignatura', auth_docente, function(request, response, next) {
+    response.render('docenteanalizar', {});
   });
 }

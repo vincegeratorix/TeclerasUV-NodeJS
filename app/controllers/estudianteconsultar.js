@@ -29,7 +29,7 @@ module.exports = function(app) {
           codigo: asignaturas_res[i].dataValues.ASI_CODIGO
         })
       }
-      response.render('consultarestudiante', {
+      response.render('estudianteconsultar', {
         asignaturas: asignaturas
       });
     })

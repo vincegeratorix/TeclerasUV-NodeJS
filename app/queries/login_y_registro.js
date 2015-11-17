@@ -12,13 +12,6 @@ exports.consultas = {
         EST_PASSWORD: contrasena
       })
       .save()
-      .then(function(anotherTask) {
-        // you can now access the currently saved task with the variable anotherTask... nice!
-        console.log(anotherTask);
-      }).catch(function(error) {
-        // Ooops, do some error-handling
-        console.log(error);
-      })
   },
   buscar_docentes: db.TV_DOCENTE.findAll(),
   insertar_un_docente: function(nombre, correo, contrasena) {
@@ -29,12 +22,5 @@ exports.consultas = {
         DOC_PASSWORD: contrasena
       })
       .save()
-      .then(function(anotherTask) {
-        // you can now access the currently saved task with the variable anotherTask... nice!
-        console.log(anotherTask);
-      }).catch(function(error) {
-        // Ooops, do some error-handling
-        console.log(error);
-      })
   }
 }

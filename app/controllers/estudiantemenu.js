@@ -1,6 +1,6 @@
 var express = require('express'),
   router = express.Router(),
-  auth_docente = require("../middleware/auth_docente.js"),
+  auth_estudiante = require("../middleware/auth_estudiante.js"),
   queries = require('../queries/index.js');
 
 module.exports = function(app) {
@@ -12,7 +12,8 @@ module.exports = function(app) {
   }));
   app.use('/', router);
 
-  router.get('/docente/realizar/:idasignatura', auth_docente, function(request, response, next) {
-    response.render('realizardocente', {});
+  router.get('/estudiante/menu', auth_estudiante, function(request, response, next) {
+    console.log("id usuario:",request.session.name, "tipo:", request.session.tipo);
+    response.render('estudiantemenu', {});
   });
 }

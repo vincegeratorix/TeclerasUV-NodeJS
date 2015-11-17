@@ -8,10 +8,9 @@ var fs = require('fs'),
 /*Acá se define el objeto de la base de datos, donde los parámetros son:
 database, usuario, password, opciones
 */
-var sequelize = new Sequelize('sql396080', 'sql396080', 'xE1!mJ2!', {
-  /*Esta es una base de adtos remota que creé, tiene hasta 5 megas, es gratis. Como no tengo tarjeta de crétido para la cuenta gratis de google o amazon, me creé esa
-  */
-  host: 'sql3.freesqldatabase.com',
+var sequelize = new Sequelize('teclerasuv', 'teclerasuv', 'desarrolloweb', {
+
+  host: 'localhost',
   dialect: 'mysql',
   autoIncrement: true,
   pool: {

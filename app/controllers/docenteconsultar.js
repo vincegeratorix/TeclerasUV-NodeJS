@@ -38,7 +38,7 @@ module.exports = function(app) {
           codigo: asignaturas_res[i].dataValues.ASI_CODIGO
         })
       }
-      response.render('consultardocente', {
+      response.render('docenteconsultar', {
         datos: datos_prueba,
         asignaturas: asignaturas
       });

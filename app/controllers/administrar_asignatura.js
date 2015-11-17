@@ -52,7 +52,7 @@ Recordar: post recibe en request.body*/
     */
     switch (request.body.opcion) {
       case 'volver':
-        response.redirect("/menu");
+        response.redirect("/docente/menu");
         break;
       case 'modificar':
         queries.updates.actualizar_asignatura(request.body.id, request.body.nombre, request.body.codigo);

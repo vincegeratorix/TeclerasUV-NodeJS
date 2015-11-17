@@ -1,5 +1,5 @@
-# CRUD-sencillo-NodeJS
-Repositorio central del proyecto de Desarrollo Web Tecleras Virtuales.
+# Tecleras UV en NodeJS
+Aplicación de las tecleras uv en nodejs para el ramo de desarrollo web.
 
 ##Instalación
 instalar nodejs
@@ -16,8 +16,16 @@ npm install -g gulp
 gulp
 
 ##Base de datos
-Instalar MySQL desde la página respectiva.
-La base de datos es remota, así que no tienen que instalarla :D
+Instalar MySQL 5.6.x
+Loguearse como root
+en la consola, pegar los siguientes comandos
+````create user 'teclerasuv'@'localhost' identified by 'desarrolloweb';````
+````create database teclerasuv;````
+````grant all privileges on teclerasuv.* to teclerasuv@'localhost';````
+````exit;````
+
+En cmd usar:
+````mysql -u teclerasuv -p teclerasuv < archivo_dump.sql````
 
 ##Tests
 No sirven. los probé para farmautomático xD

@@ -19,13 +19,26 @@ gulp
 Instalar MySQL 5.6.x
 Loguearse como root
 en la consola, pegar los siguientes comandos
-````create user 'teclerasuv'@'localhost' identified by 'desarrolloweb';````
-````create database teclerasuv;````
-````grant all privileges on teclerasuv.* to teclerasuv@'localhost';````
-````exit;````
+````
+create user 'teclerasuv'@'localhost' identified by 'desarrolloweb';
+````
+
+````
+create database teclerasuv;
+````
+
+````
+grant all privileges on teclerasuv.* to teclerasuv@'localhost';
+````
+
+````
+exit;
+````
 
 En cmd usar:
-````mysql -u teclerasuv -p teclerasuv < archivo_dump.sql````
+````
+mysql -u teclerasuv -p teclerasuv < archivo_dump.sql
+````
 
 ##Tests
 No sirven. los probé para farmautomático xD

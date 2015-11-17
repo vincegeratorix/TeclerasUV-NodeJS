@@ -19,7 +19,7 @@ app.use es una función de express para "usar" ciertas funcionalidades dentro de
 /*auth_docente es una función middleware, esto significa que se ejecuta antes que la siguiente, siempre que se llame a next().
 Ejemplo: si en la func middleware nunca llamo a next(), termina la ejecución del router, pero si llamo a next(), se ejecutará la siguiente en el router, pueden haber tantas como uno quiera
 Recordar: post recibe en request.body*/
-  router.get('/administrar_asignatura', auth_docente, function(request, response, next) {
+  router.get('/admin/administrar_asignatura', auth_docente, function(request, response, next) {
     //queries es un namespace para los archivos de consultas, que inventé yo para no importar tanta cosa xD ver app/queries/index.js
     queries.consultas.buscar_una_asignatura(request.query.idasignatura).then(function(asignatura_res) {
       var asignatura;
@@ -47,7 +47,7 @@ Recordar: post recibe en request.body*/
   })
   /*Acá se recibe el resultado del formulario. Si no se pone el auth, entonces cualquiera puede enviar un post mediante ajax D:
   */
-  router.post('/administrar_asignatura', auth_docente, function(request, response, next) {
+  router.post('/admin/administrar_asignatura', auth_docente, function(request, response, next) {
     /*las opciones del radio
     */
     switch (request.body.opcion) {
@@ -69,6 +69,6 @@ Recordar: post recibe en request.body*/
      y luego en el get del otro lado las usan simplemente, como si nada,
      ejemplo:
       usando = mivar;*/
-    response.redirect("/consultar");
+    response.redirect("/docente/consultar");
   })
 }

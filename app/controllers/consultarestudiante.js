@@ -13,7 +13,7 @@ module.exports = function(app) {
   app.use('/', router);
 /*Este router sólo consulta todas las asignaturas, no recibe nada
 */
-  router.get('/consultarestudiante', auth_estudiante, function(request, response, next) {
+  router.get('/estudiante/consultar', auth_estudiante, function(request, response, next) {
     /*Estos son datos de prueba, simplemente para que vean que se puede :v
      */
     queries.consultas.buscar_asignaturas.then(function(asignaturas_res){

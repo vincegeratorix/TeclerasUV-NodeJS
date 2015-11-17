@@ -12,11 +12,11 @@ module.exports = function(app) {
   }));
   app.use('/', router);
 
-  router.get('/insertar', auth_docente, function(request, response, next) {
-    response.render('insertar', {});
+  router.get('/admin/insertar', auth_docente, function(request, response, next) {
+    response.render('insertarasignatura', {});
   });
-  router.post("/insertar", auth_docente, function(request, response, next) {
-    queries.inserts.insertar_asignatura(request.body.id, request.body.nombre, request.body.codigo)
+  router.post("/admin/insertar", auth_docente, function(request, response, next) {
+    queries.inserts.insertar_asignatura(request.body.nombre, request.body.codigo)
     /*En este caso puse el catch acá, para eso, tengo que quitarlo de las consultas
     */
       .catch(function(error) {
@@ -24,8 +24,8 @@ module.exports = function(app) {
         console.log(error);
         /*Como ven, acá hay dos redirect, pero no se ejecutan uno y después el otro, ya que cuando entra a un callback, el flujo de ejecución cambia
         */
-        response.redirect("/insertar");
+        response.redirect("/admin/insertar");
       })
-    response.redirect("/consultardocente");
+    response.redirect("/docente/consultar");
   })
 }

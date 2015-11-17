@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     ASI_ID: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     ASI_CODIGO: {
       type: DataTypes.STRING,

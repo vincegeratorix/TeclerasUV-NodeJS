@@ -12,7 +12,7 @@ module.exports = function(app) {
   }));
   app.use('/', router);
 
-  router.get('/analizardocente/:idasignatura', auth_docente, function(request, response, next) {
+  router.get('/docente/analizar/:idasignatura', auth_docente, function(request, response, next) {
     response.render('analizardocente', {});
   });
 }

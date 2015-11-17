@@ -13,7 +13,7 @@
 <br>
 <br>
 Asignaturas:
-<form action="/administrar_asignatura" class="" method="get">
+<form action="/admin/administrar_asignatura" class="" method="get">
 
   <%for(i in asignaturas){%>
     <hr>
@@ -49,13 +49,13 @@ Asignaturas:
         <a href='/consultaruno/<%=asignaturas[i].id%>'>Ver datos</a>
       </div>
       <div class="col-md-2">
-        <a href='/realizar/<%=asignaturas[i].id%>'>Realizar pregunta</a>
+        <a href='/docente/realizar/<%=asignaturas[i].id%>'>Realizar pregunta</a>
       </div>
       <div class="col-md-2">
-        <a href='/gestionar/<%=asignaturas[i].id%>'>Gestionar pregunta</a>
+        <a href='/docente/gestionar/<%=asignaturas[i].id%>'>Gestionar pregunta</a>
       </div>
       <div class="col-md-2">
-        <a href="/analizardocente/<%=asignaturas[i].id%>">Analizar Preguntas</a>
+        <a href="/docente/analizar/<%=asignaturas[i].id%>">Analizar Preguntas</a>
       </div>
     </div>
     <br>

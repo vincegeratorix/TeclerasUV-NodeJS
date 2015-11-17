@@ -12,7 +12,7 @@ module.exports = function(app) {
   }));
   app.use('/', router);
 
-  router.get('/menuestudiante', auth_estudiante, function(request, response, next) {
+  router.get('/estudiante/menu', auth_estudiante, function(request, response, next) {
     response.render('menuestudiante', {});
   });
 }

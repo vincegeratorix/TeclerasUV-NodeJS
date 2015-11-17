@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     PR_ID: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     PR_HORA_INICIO: {
       type: DataTypes.DATE,

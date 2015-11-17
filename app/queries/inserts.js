@@ -1,10 +1,9 @@
 var db = require('../models');
 
 exports.consultas = {
-  insertar_asignatura: function(id, nombre, codigo) {
+  insertar_asignatura: function(nombre, codigo) {
     return db.TV_ASIGNATURA
       .build({
-        ASI_ID: id,
         ASI_CODIGO: codigo,
         ASI_NOMBRE: nombre
       })

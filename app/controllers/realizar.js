@@ -12,7 +12,7 @@ module.exports = function(app) {
   }));
   app.use('/', router);
 
-  router.get('/realizar/:idasignatura', auth_docente, function(request, response, next) {
-    response.render('realizar', {});
+  router.get('/docente/realizar/:idasignatura', auth_docente, function(request, response, next) {
+    response.render('realizardocente', {});
   });
 }

@@ -2,7 +2,7 @@
 
 <%if(typeof asignatura != 'undefined' && typeof asignatura.id != 'undefined'){%>
 
-<form action="/administrar_asignatura" class="" method="post">
+<form action="/admin/administrar_asignatura" class="" method="post">
   <%=asignatura.id%>
   <input name="id" type="hidden" value="<%=asignatura.id%>">
   <br>

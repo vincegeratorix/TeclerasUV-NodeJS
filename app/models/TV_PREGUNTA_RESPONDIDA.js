@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     PRES_ID: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     PR_ID: {
       type: DataTypes.INTEGER(11),

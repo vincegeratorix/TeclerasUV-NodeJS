@@ -13,7 +13,7 @@ module.exports = function(app) {
   app.use('/', router);
 /*Este router sólo consulta todas las asignaturas, no recibe nada
 */
-  router.get('/consultardocente', auth_docente, function(request, response, next) {
+  router.get('/docente/consultar', auth_docente, function(request, response, next) {
     /*Estos son datos de prueba, simplemente para que vean que se puede :v
      */
     var datos_prueba = [{
@@ -25,6 +25,7 @@ module.exports = function(app) {
     }]
 
     queries.consultas.buscar_asignaturas.then(function(asignaturas_res){
+      console.log("asignaturas docente",asignaturas_res)
       var asignaturas = [];
       /*for i in algo es azúcar sintáctico de javascript para:
       var i = 0;

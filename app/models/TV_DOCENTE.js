@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     DOC_ID: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     DOC_CORREO: {
       type: DataTypes.STRING,

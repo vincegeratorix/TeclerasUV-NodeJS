@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     PM_ID: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     PM_NOMBRE: {
       type: DataTypes.STRING,

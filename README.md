@@ -1,7 +1,9 @@
 # Tecleras UV en NodeJS
+
 Aplicación de las tecleras uv en nodejs para el ramo de desarrollo web.
 
 ##Instalación
+
 instalar nodejs
 
 en la consola:
@@ -13,12 +15,17 @@ npm install
 npm install -g gulp
 
 ##Arrancar
+
 gulp
 
 ##Base de datos
+
 Instalar MySQL 5.6.x
+
 Loguearse como root
+
 en la consola, pegar los siguientes comandos
+
 ````
 create user 'teclerasuv'@'localhost' identified by 'desarrolloweb';
 ````
@@ -36,11 +43,15 @@ exit;
 ````
 
 En cmd usar:
+
 ````
 mysql -u teclerasuv -p teclerasuv < archivo_dump.sql
 ````
 
+Usando el dump de la carpeta data.
+
 ##Tests
+
 No sirven. los probé para farmautomático xD
 
 Sería bueno que se hagan acá :o lo documentaré si tengo tiempo.

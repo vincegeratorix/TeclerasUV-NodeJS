@@ -47,12 +47,14 @@ Por favor al instalarlo ponerle que el servicio inicie automáticamente al prend
 Si les dice error de conexión, es que no iniciaron el servicio. para inciarlo manualmente:
 tecla windows+r y ejecutar "services.msc", ir a propiedades de mysql (o mysql56, etc), e iniciarlo, y setearlo en automático.
 
-Si les dice comando no encontrado tienen que añadirlo al path... es un lío lo más fácil en este caso si no saben... es ir a la carpeta de mysql con:
+Si les dice comando no encontrado tienen que añadirlo al path...  para eso:
+vayan a panel de control->Sistema y seguridad->sistema->configuración avanzada->variables de entorno y cambian PATH de usuario por:
 
 ````
-cd C:\Program Files\MySQL\MySQL Server 5.6\bin
+todoelresto;C:\Program Files\MySQL\MySQL Server 5.6\bin
 ````
-o algo similar. y desde ahí ejecutar los comandos, eso o busquen en google cómo añadir una ruta al path de windows o linux...
+
+Según donde se haya instalado.
 
 en la consola de mysql, pegar los siguientes comandos
 

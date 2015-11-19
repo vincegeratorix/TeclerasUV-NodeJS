@@ -18,6 +18,8 @@ pueden arrastrar y soltar la carpeta en la terminal de cmd o de linux.
 npm install
 ````
 
+si dice que npm es un comando no reconocido, cerrar todas las terminales y volverlas a abrir, si sigue diciendo, reiniciar el pc.
+
 ````
 npm install -g gulp
 ````

@@ -42,6 +42,13 @@ mysql -u root -p
 ````
 y poner su contraseña cuando se as pida (la que pusieron al instalar mysql), si no tienen, entonces el comando es sin el -p, es decir ````mysql -u root````
 
+Por favor al instalarlo ponerle que el servicio inicie automáticamente al prender el pc (es un checkbox que tienen que marcar), y luego reiniciar el pc.
+
+Si les dice error de conexión, es que no iniciaron el servicio. para inciarlo manualmente:
+tecla windows+r y ejecutar "services.msc", ir a propiedades de mysql (o mysql56, etc), e iniciarlo, y setearlo en automático.
+
+Si les dice comando no encontrado, reiniciar el pc o cerrar todas las terminales y volverlas a abrir.
+
 en la consola de mysql, pegar los siguientes comandos
 
 ````

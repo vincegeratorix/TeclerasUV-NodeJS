@@ -8,15 +8,25 @@ instalar nodejs
 
 en la consola:
 
+````
 cd \<carpeta\>
+````
 
+````
 npm install
+````
 
+````
 npm install -g gulp
+````
 
 ##Arrancar
 
+````
 gulp
+````
+
+La página estará en localhost:3000
 
 ##Base de datos
 

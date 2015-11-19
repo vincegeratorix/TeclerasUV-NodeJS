@@ -48,7 +48,9 @@ En cmd usar:
 mysql -u teclerasuv -p teclerasuv < archivo_dump.sql
 ````
 
-Usando el dump de la carpeta data.
+Cuando pida contraseña, tipear: desarrolloweb
+
+Usando el archivo dump de la carpeta data.
 
 ##Tests
 

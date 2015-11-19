@@ -34,11 +34,11 @@ La página estará en localhost:3000
 
 ##Base de datos
 
-Instalar MySQL 5.6.x
+Instalar MySQL 5.6.x (es la que uso, aunque en teoría debería funcionar con 5.7.x, no lo he probado).
 
 Loguearse como root
 
-en la consola, pegar los siguientes comandos
+en la consola de mysql, pegar los siguientes comandos
 
 ````
 create user 'teclerasuv'@'localhost' identified by 'desarrolloweb';

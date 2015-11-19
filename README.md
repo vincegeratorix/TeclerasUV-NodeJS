@@ -36,7 +36,11 @@ La página estará en localhost:3000
 
 Instalar MySQL 5.6.x (es la que uso, aunque en teoría debería funcionar con 5.7.x, no lo he probado).
 
-Loguearse como root
+Loguearse como root con:
+````
+mysql -u root -p
+````
+y poner su contraseña cuando se as pida (la que pusieron al instalar mysql), si no tienen, entonces el comando es sin el -p, es decir ````mysql -u root````
 
 en la consola de mysql, pegar los siguientes comandos
 

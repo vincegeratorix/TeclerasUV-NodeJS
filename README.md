@@ -9,8 +9,10 @@ instalar nodejs
 en la consola:
 
 ````
-cd \<carpeta\>
+cd carpeta_donde_esta_bajada_la_app
 ````
+
+pueden arrastrar y soltar la carpeta en la terminal de cmd o de linux.
 
 ````
 npm install
